@@ -1,0 +1,22 @@
+$nav-height: 5vh;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  max-height: $nav-height;
+  background-image: linear-gradient(to right, red, green, orange, yellow, blue, indigo, purple, violet, silver, grey);
+
+  #{&}-logo {
+    max-height: $nav-height;
+    
+    #{&}-img {
+      max-height: $nav-height;
+    }
+  }
+}
+
+@media (min-width: 450px) {
+  .nav-btn {
+    display: none;
+  }
+}
