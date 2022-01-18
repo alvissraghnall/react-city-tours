@@ -1,26 +1,70 @@
-import React, { Component } from "react";
-import logo from "../../images/logo.png";
-import Button from "./Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  CssBaseline,
+  Typography,
+  makeStyles,
+  useTheme,
+  useMediaQuery,
+  Theme
+} from "@material-ui/core";
+import { Link } from "react-router-dom";
+import DialogComponent from "./Dialog";
 
+const useStyles = makeStyles((theme: Theme) => ({
+  navlinks: {
+    marginLeft: theme.spacing(5),
+    display: "flex",
+  },
+  logo: {
+    flexGrow: 1,
+    cursor: "pointer",
+  },
+  link: {
+    textDecoration: "none",
+    color: "white",
+    fontSize: "20px",
+    marginLeft: theme.spacing(20),
+    "&:hover": {
+      color: "yellow",
+      borderBottom: "1px solid white",
+    },
+  },
+}));
 
-class Header extends Component {
-  
-  render(){
-    let BarsIcon = <FontAwesomeIcon icon={faBars} />
-    return (
-      <header className="navbar">
-        <div className = "navbar-logo">
-          <img src={logo} alt="City Tours" className="navbar-logo-img" height="100%" />
-        </div>
-        <div className="desktop-nav"></div>
-        <div className="mobile-btn">
-          <Button rendered={BarsIcon} variant="rgba(250, 247, 244, .4)" classNom="nav-btn" inverted={true} />
-        </div>
-      </header>  
-    )
-  }
+function Navbar() {
+  const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  return (
+    <AppBar position="static">
+      <CssBaseline />
+      <Toolbar>
+        <Typography variant="h4" className={classes.logo}>
+          City Tours
+        </Typography>
+        {isMobile ? (
+          <DialogComponent />
+        ) : (
+          <div className={classes.navlinks}>
+            <Link to="/" className={classes.link}>
+              Home
+            </Link>
+            <Link to="/about" className={classes.link}>
+              About
+            </Link>
+            <Link to="/contact" className={classes.link}>
+              Contact
+            </Link>
+            <Link to="/faq" className={classes.link}>
+              FAQ
+            </Link>
+          </div>
+        )}
+      </Toolbar>
+    </AppBar>
+  );
 }
-
-export default Header;
+export default Navbar;
