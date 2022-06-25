@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 
 const WrapperDiv = styled.div`
   text-align: center;
@@ -32,7 +32,7 @@ export default class NotFound extends Component {
         <ErrorImg src="../assets/error-404.svg" alt="404 Error Image" />
         
         <Text>The requested URL was not found on this server. </Text>
-        <Link to="/"> <ArrowCircleLeftIcon /> Click Here to return back to HomePage!</Link> 
+        <Link to="/"> <FontAwesomeIcon icon={faArrowLeft} /> Click Here to return back to HomePage!</Link> 
       </WrapperDiv>
       </>);
   }
