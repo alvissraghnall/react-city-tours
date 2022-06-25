@@ -56,7 +56,7 @@ export default function DialogBox() {
         open={open}
         onClose={handleClose}
       >
-        <AppBar sx={{ position: 'relative' }}>
+        <AppBar position="relative">
           <Toolbar>
             <IconButton
               edge="start"
