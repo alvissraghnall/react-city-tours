@@ -59,7 +59,7 @@ function Navbar() {
               Contact
             </Link>
             <Link to="/faq" className={classes.link}>
-              FAQ
+              FAQs
             </Link>
           </div>
         )}
