@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import ArrowCircleLeftIcon from '@material-ui/icons/ArrowCircleLeft';
+import { ArrowCircleLeftIcon } from '@material-ui/icons';
 
 const WrapperDiv = styled.div`
   text-align: center;
