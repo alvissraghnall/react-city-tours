@@ -33,7 +33,6 @@ export default class NotFound extends Component {
         
         <Text>The requested URL was not found on this server. </Text>
         <Link to="/"> <ArrowCircleLeftIcon /> Click Here to return back to HomePage!</Link> 
-        </h1>
       </WrapperDiv>
       </>);
   }
