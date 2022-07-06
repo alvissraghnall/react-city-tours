@@ -1,4 +1,5 @@
 import React from "react";
+//import type { ButtonStyles } from "../../types/components/shared/index";
 
 type ButtonProps = {
   rendered: JSX.Element,

@@ -66,9 +66,9 @@ export default function DialogBox() {
             >
               <CloseIcon />
             </IconButton>
-            <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+            {/* <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               Sound
-            </Typography>
+            </Typography> */}
             <Button autoFocus color="inherit" onClick={handleClose}>
               save
             </Button>
