@@ -1,12 +1,10 @@
-import { Navbar, Intro } from '../components';
+import { Navbar, Intro, Destinations, Footer, RecentTrips } from '../components';
 
 import nightImg from "../assets/night.jpg";
-
 
 const Root = () => {
   return (
     <>
-        <Navbar />
         <Intro
           image={nightImg}
           title="Your journey; Your story"
@@ -14,6 +12,8 @@ const Root = () => {
           linkText='Travel Plan'
           url='/'
         />
+        <Destinations />
+        <RecentTrips />
     </>
   )
 }

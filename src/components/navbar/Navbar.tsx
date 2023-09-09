@@ -46,7 +46,7 @@ const Navbar = () => {
           {
             items.map((item, idx) => (
               <li key={idx} className={styles.item}>
-                <Link to={item.link} className={`${styles.link} ${item.link === "/sign-up" ? styles.signupMobile : ''}`}>
+                <Link to={item.link} className={`${styles.link} ${item.link === "/sign-up" ? styles.signupMobile : ''}`} onClick={changeIsMenuOpen}>
                   <span className={styles.iconWrap}>
                     {item.icon && <item.icon classNom={styles.icon} />}
                   </span>
