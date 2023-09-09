@@ -1,0 +1,162 @@
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 2rem;
+    width: 96%;
+    height: 5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgb(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+    position: fixed;
+    top: 1.25rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 43932;
+}
+
+.logo {
+    color: #222;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 0.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.link:hover {
+    background: rgb(1, 149, 154);
+    color: #f0ffff;
+    border-radius: 0.25rem;
+    transition: all 0.16s ease-in-out;
+}
+
+.iconWrap {
+    margin-right: 0.5rem;
+}
+
+.icon {
+    width: 14px;
+    height: 14px;
+}
+
+.signup {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.signup:hover {
+    background: #151516;
+    color: #f0ffff;
+}
+
+.signupMobile, .mobileMenuBar {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    .logo {
+        width: 100%;
+    }
+
+    .items {
+        z-index: 55;
+    }
+
+    .menuIcon {
+        width: 1.9rem;
+        height: 1.9rem;
+        color: #222;
+    }
+
+    .mobileMenuBar {
+        cursor: pointer;
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #f0ffff;
+        height: auto;
+        min-height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        align-items: stretch;
+        padding-top: 5rem;
+        padding-bottom: 1.8rem;
+        margin: 0;
+        transform: translateX(-100%);
+        transition: 0.23s ease-in-out;
+        border-radius: 0.75rem;
+    }
+
+    .menu.menuActive {
+        z-index: -1;
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.22s ease-in-out;
+    }
+
+    .link {
+        display: block;
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .link:hover {
+        background: rgb(1, 149, 154);
+        transition: none;
+    }
+
+    .signup {
+        display: none;
+    }
+
+    .signupMobile {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        width: 80%;
+        margin: auto;
+        font-weight: bolder;
+        text-decoration: none;
+        letter-spacing: 0.125rem;
+        font-size: 1.1rem;
+        color: #f0ffff;
+        background: #01959A;
+        border-radius: 0.25rem;
+    }
+
+    .item {
+        width: 100%;
+        text-align: center;
+    }
+}
